@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#map_zone { 
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+#weatherPoint_btn{
+    z-index: 400;
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.off{
+    background-color: gray;
+}
+
+.on{
+    background-color: rgb(1, 184, 1);
+    box-shadow: inset 1px 1px 10px 5px #00ff37;
+}
+
+/* .cursor-cross{
+    cursor: crosshair;
+} */
+
+#weather_zone {
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
