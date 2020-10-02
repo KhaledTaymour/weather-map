@@ -8,6 +8,8 @@ const attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/">Op
 const tiles = L.tileLayer(tileURL, {attribution});
 
 tiles.addTo(mymap);
+
+let marker;
 //#endregion
 
 //#region watermark
@@ -34,7 +36,8 @@ L.control.watermark({ position: 'bottomleft' }).addTo(mymap);
 //#endregion
 
 const handleClick = (e)=>{
-    handleGetTempFromLatLng(e.latlng.lat, e.latlng.lng)
+    handleMarkers(e.latlng.lat, e.latlng.lng);
+    handleGetTempFromLatLng(e.latlng.lat, e.latlng.lng);
 }
 
 export const activateGetLatLongOnMapClick = ()=>{
@@ -45,3 +48,10 @@ export const deactivateGetLatLongOnMapClick = ()=>{
     mymap.removeEventListener('click', handleClick );
     mymap.off('click', handleClick);
 };
+
+const handleMarkers = (_lat, _lng) =>{
+    if (marker != undefined) {
+        mymap.removeLayer(marker);
+    }
+    marker = L.marker([_lat, _lng]).addTo(mymap);
+}
