@@ -32,13 +32,61 @@ html, body {
     box-shadow: inset 1px 1px 10px 5px #00ff37;
 }
 
-/* .cursor-cross{
+body .cursor-cross{
     cursor: crosshair;
-} */
+}
 
 #weather_zone {
     width: 30%;
     height: 100%;
     float: left;
     text-align: center;
+    background-image: linear-gradient(to right, white, #aad3df , navy, black);
+    border-left: black solid 1px;
+}
+
+#initial_weather_card{
+    color: black;
+    height: 100%; 
+    width: 100%;
+    background-image: 
+    linear-gradient(#ccc, #ccc), 
+    linear-gradient(#ccc, #ccc), 
+    linear-gradient(#ccc, #ccc), 
+    linear-gradient(#ccc, #ccc), 
+    radial-gradient(circle 50px, #ccc 100%, transparent),
+    linear-gradient(#f1f1f1, #f1f1f1);
+    background-size: 
+    90% 50px, 
+    85% 40px, 
+    85% 40px, 
+    85% 40px, 
+    200px 200px, 
+    100% 100%;
+    background-position: 
+    20px 110px, 
+    20px 170px, 
+    20px 220px, 
+    20px 270px, 
+    50% 320px, 
+    0 0;
+    background-repeat: no-repeat; 
+}
+
+#weather-card{
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    box-shadow: -25px 25px 12px -16px rgba(0, 0, 0, 0.5);
+}
+
+#weather_container{
+    display: none;
+}
+
+#weather_icon{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    filter: drop-shadow(0px 0px 50px rgb(255, 255, 255)); 
 }

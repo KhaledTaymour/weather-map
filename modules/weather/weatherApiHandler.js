@@ -7,5 +7,10 @@ export const getTemperatureByLatLng = (_lat, _lng)=>{
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${_lat}&lon=${_lng}&appid=${API_KEY}&units=metric&lang=${lang}`)
     .then(res => res.json())
     .then(data => showTemperature(data))
-    .catch(err => console.error(err));
+    .catch(err => console.log(err));
+}
+
+export const getWeatherIcon = (iconCode, isIconSizeDoubled) => {
+    if(isIconSizeDoubled) return `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    else return `http://openweathermap.org/img/wn/${iconCode}.png`;
 }

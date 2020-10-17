@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weater Map</title>
     <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="index.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
 </head>
+
 <body>
     <div id="map_zone"></div>
     <div id="weather_zone">
-        <img id="weatherImage" src="https://via.placeholder.com/100" alt="weather icon" style="width: 100px; height: 100px;" />
-        <h2 id="location">Location: </h2>
-        <h2 id="time">Time: </h2>
-        <h3 id="temparture">Temperature: </h3>
-        <h3 id="humidity">Humidity: </h3>
-        <h3 id="description"></h3>
+        
+        <div id="weather-card" class="container card text-white bg-dark border-warning mb-3">
+            <div id="initial_weather_card">
+                <h3>How to work?</h3>
+                <p>1. Switch the button on.</p>
+                <p>2. Pick location on the map.</p>
+            </div>
+            <div id="weather_container">
+                <h2 id="location">Location: </h2>
+                <h3 id="temparture">Temperature: </h3>
+                <h3 id="humidity">Humidity: </h3>
+                <h3 id="description"></h3>
+                <img id="weather_icon" src="" />
+            </div>
+        </div>
     </div>
     <button id="weatherPoint_btn" class="off">Get weather at a Point</button>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <script type="module" src="main.js"></script>
 </body>
+
 </html>
